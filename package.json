@@ -1,0 +1,34 @@
+{
+  "name": "tel-protocol-handler-circuit-demo",
+  "version": "0.0.1",
+  "description": "Demo app to show the tel protocol handler",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "pack": "./node_modules/.bin/build --dir",
+    "dist": "./node_modules/.bin/build"
+  },
+  "keywords": [
+    "Electron",
+    "macOS",
+    "win32"
+  ],
+  "author": "",
+  "devDependencies": {
+    "electron": "1.8.4",
+    "electron-builder": "17.1.2"
+  },
+  "build": {
+    "appId": "com.electron-protocol-handler",
+    "protocols": {
+      "name": "electron-tel-protocol",
+      "schemes": [
+        "tel"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.Reference"
+    },
+    "win": {}
+  }
+}
